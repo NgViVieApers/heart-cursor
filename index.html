@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="n.v.Vie.Anh"/>
+        <title>Trái tim của thủ khoa Lý (địa lý)</title>
+        <style>
+            body {
+                background-color: black;
+                min-height: 100vh;
+                padding: 0%;
+                margin: 0%;
+            }
+            span {
+                background-image: url("https://cdn2.iconfinder.com/data/icons/free-1/128/Love__heart_like-512.png");
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                background-size: cover;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                pointer-events: none;
+                animation: animate 5s linear;
+            }
+            @keyframes animate {
+                0% {
+                    transform: translate(-50%, -50%);
+                    filter: hue-rotate(0);
+                    opacity: 1;
+                }
+                100% {
+                    transform: translate(-50%, -5000%);
+                    filter: hue-rotate(720deg);
+                    opacity: 1;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <span></span>
+        <script>
+            var body_tag = document.querySelector("body");
+            body_tag.onmousemove = function(event) {
+                var x_pos = event.offsetX;
+                var y_pos = event.offsetY;
+                var span_tag = document.createElement("SPAN");
+                span_tag.style.left = x_pos + "px";
+                span_tag.style.top = y_pos + "px";
+                var size = Math.floor(Math.random() * 100);
+                span_tag.style.width = size + "px";
+                span_tag.style.height = size + "px";
+                body_tag.appendChild(span_tag);
+                setTimeout(function() {
+                    span_tag.remove();
+                }, 3000)
+            }
+        </script>
+        
+    </body>
+    </html>
