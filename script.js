@@ -72,7 +72,7 @@ function createBubble(index) {
   element.style.width = tmp + "px";
   //element.style.lineHeight = tmp + "px";
   //element.style.fontSize = tmp/5 + "px"
-  element.style.filter = "hue-rotate("+(randomInt(-40,40) + "deg")+")";
+  element.style.filter = "hue-rotate("+(randomInt(-30,30) + "deg")+")";
   element.style.backgroundImage = "url(img" + (Math.floor(Math.random()*5)+1) + ".png)";
   
   return {
