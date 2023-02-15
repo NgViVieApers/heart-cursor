@@ -64,7 +64,7 @@ function createBubble(index) {
   element.style.height = tmp + "px";
   element.style.width = tmp + "px";
   // element.style.filter = "hue-rotate("+(randomInt(-30,30) + "deg")+")";
-  element.style.backgroundImage = "url(img" + (Math.floor(Math.random()*5)+1) + ".png)";
+  element.style.backgroundImage = "url(img" + (Math.floor(Math.random()*3)+1) + ".png)";
   
   return {
     element: element,
