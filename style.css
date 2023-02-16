@@ -91,11 +91,11 @@ span {
       opacity: 1;
     }
     75% {
-      transform: translateY(40vh);
+      transform: translateY(70vh);
       opacity: 1;
     }
     100% {
-      transform: translateY(60vh);
+      transform: translateY(40vh);
       opacity: 0;
     }
   }
