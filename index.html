@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="n.v.Vie.Ah"/>
+        <title>Trái tim của thủ khoa (địa) Lý</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="rain front-row"></div>
+        <div class="rain back-row"></div>
+        <script>
+            var body_tag = document.querySelector("body");
+            body_tag.onmousemove = function(event) {
+                var x_pos = event.offsetX;
+                var y_pos = event.offsetY;
+                var span_tag = document.createElement("SPAN");
+                span_tag.style.left = x_pos + "px";
+                span_tag.style.top = y_pos + "px";
+                var size = Math.floor(Math.random() * 70);
+                span_tag.style.width = size + "px";
+                span_tag.style.height = size + "px";
+                body_tag.appendChild(span_tag);
+                setTimeout(function() {
+                    span_tag.remove();
+                }, 3000)
+            }
+        </script>
+        <script src='jquery-2.2.4.min.js'></script>
+        <script src="TweenMaxMin.js"></script>
+        <script src="scriptRain.js"></script>
+        <script src="scriptRanBub.js"></script>
+        
+    </body>
+    </html>

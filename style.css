@@ -1,0 +1,124 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: black;
+    min-height: 100vh;
+    padding: 0%;
+    margin: 0%;
+}
+span {
+    background-image: url("https://cdn2.iconfinder.com/data/icons/free-1/128/Love__heart_like-512.png");
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-size: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    animation: animate 5s linear;
+}
+.bubble {
+    background-image: url("img0.png");
+    line-height: 70px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    position: absolute;
+    left: 0px;
+    text-align: center;
+    /* background-color: #ff0000;
+    background-color: #d50000;
+    background-color: #b71c1c; */
+    color: rgba(255, 255, 255, 0.9);
+    /* border-radius: 10px; */
+    opacity: 0;
+    will-change: transform;
+    background-size: cover;
+    /* transform: translate(-50%, -50%); */
+    pointer-events: none;
+    
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%);
+        filter: hue-rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -5000%);
+        filter: hue-rotate(720deg);
+        opacity: 1;
+    }
+}
+
+.rain {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+  
+  .rain.back-row {
+    /* background-image: url("img.png"); */
+    display: none;
+    z-index: 1;
+    bottom: 60px;
+    opacity: 0.5;
+  }
+  
+  body.back-row-toggle .rain.back-row {
+    display: block;
+  }
+  
+  .drop {
+    background-image: url("img.png");
+    filter: hue-rotate(50deg);
+    position: absolute;
+    bottom: 100%;
+    width: 25px;
+    height: 25px;
+    pointer-events: none;
+    animation: drop 1.0s linear infinite;
+  }
+  
+  @keyframes drop {
+    0% {
+      transform: translateY(100vh);
+    }
+    75% {
+      transform: translateY(50vh);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0vh);
+      opacity: 0.2;
+    }
+  }
+  
+  .stem {
+    
+    width: 1px;
+    height: 60%;
+    margin-left: 7px;
+    /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.25)); */
+    animation: stem 0.5s linear infinite;
+  }
+  
+  @keyframes stem {
+    0% {
+      opacity: 1;
+    }
+    65% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
